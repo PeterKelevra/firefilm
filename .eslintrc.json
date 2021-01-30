@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/display-name": ["off", { "ignoreTranspilerName": true }],
+    "react/no-unescaped-entities": ["error", {"forbid": ["{", "<", ">", "}"]}],
+    "eqeqeq": "off",
+    "curly": "error",
+    "linebreak-style": ["error", "unix"],
+    "quotes": [
+      "error",
+      "single"
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
