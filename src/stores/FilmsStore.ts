@@ -1,5 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 import { Film } from '../domain/Film';
+import { map, sortBy } from 'lodash';
 
 interface FilmsMap {
   [key: string]: Film
@@ -24,10 +25,9 @@ class FilmsStore {
 
   get filmsList(): Film[] {
     console.log('filmsList', this.films);
-    return Object.keys(this.films || {}).map(key => ({
-      ...this.films[key],
-      uid: key
-    }));
+    return sortBy(map(this.films || {}, (value, uid) => ({
+      ...value, uid
+    })), 'year');
   }
 }
 

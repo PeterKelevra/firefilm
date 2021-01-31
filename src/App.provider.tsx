@@ -16,7 +16,7 @@ export const AppProvider = () => {
   rootStore.sessionStore.setUser(getLocalStorageUser());
 
   useEffect(() => {
-    const films = firebase.films().orderByChild('name');
+    const films = firebase.films();
     films.on('value', (snapshot) => {
       !!snapshot?.val && rootStore.filmsStore.setFilms(snapshot.val());
     });
