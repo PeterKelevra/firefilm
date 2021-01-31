@@ -40,6 +40,15 @@ function FilmComments() {
         { film && <FilmCard film={ film }/> }
       </Grid>
       <Grid item xs={ 12 } sm={ 6 } md={ 8 } className={ classes.comments }>
+        <Box mb={1}>
+          <Typography variant="h4">Comentarios</Typography>
+        </Box>
+        {!commentsStore?.commentsList?.length && (
+          <Card>
+            <CardContent>Sé el primero en comentar esta película</CardContent>
+          </Card>
+
+        )}
         { commentsStore?.commentsList?.map(comment =>
           <Card>
             <CardContent>
