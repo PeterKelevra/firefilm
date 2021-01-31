@@ -38,9 +38,7 @@ function Header({ sessionStore }) {
         <Box display="flex" alignItems="center" justifyContent="flex-end" flexGrow={ 1 }>
           { !!user ? (
             <>
-              <Box mr={ 1 }>
-                <AccountCircleIcon color="secondary" fontSize="large"/>
-              </Box>
+              <AccountCircleIcon color="secondary" fontSize="large" className="account-icon"/>
               <Typography color="secondary" variant="body1">
                 { user.displayName }
               </Typography>

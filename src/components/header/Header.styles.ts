@@ -13,6 +13,9 @@ const headerStyles = makeStyles(theme => ({
     borderBottomWidth: 2,
     [theme.breakpoints.up('md')]: {
       minHeight: 80
+    },
+    '& .account-icon': {
+      marginRight: 5
     }
   },
   logo: {
@@ -25,7 +28,8 @@ const headerStyles = makeStyles(theme => ({
       float: 'left',
       marginRight: theme.spacing(2),
       [theme.breakpoints.down('xs')]: {
-        maxHeight: 40
+        maxHeight: 40,
+        marginRight: theme.spacing(1),
       }
     },
     '&:hover': {
@@ -33,7 +37,7 @@ const headerStyles = makeStyles(theme => ({
     }
   },
   logoutButton: {
-    marginLeft: theme.spacing(1)
+    marginLeft: 2
   }
 }));
 
