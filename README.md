@@ -6,7 +6,7 @@ Use yarn in order to install everything.
 yarn install --frozen-lockfile
 ```
 
-###Create .env file with Firebase properties
+###Create .env file with Firebase properties\
 FIREBASE_API_KEY=\
 FIREBASE_AUTH_DOMAIN=\
 FIREBASE_DATABASE_URL=\
